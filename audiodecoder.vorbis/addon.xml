@@ -10,7 +10,8 @@
   </requires>
   <extension
     point="xbmc.audiodecoder"
-    extension=".ogg|.oggstream"
+    extension=".ogg|.oggstream|.oga"
+    mimetype="application/ogg|audio/ogg"
     tracks="true"
     library_linux="audiodecoder.vorbis.so"/>
   <extension point="xbmc.addon.metadata">

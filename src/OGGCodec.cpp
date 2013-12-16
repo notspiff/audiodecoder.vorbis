@@ -176,7 +176,7 @@ void* Init(const char* strFile, unsigned int filecache, int* channels,
     toLoad = toLoad.substr(0, slash);
   }
 
-  result->file = XBMC->OpenFile(strFile, 4);
+  result->file = XBMC->OpenFile(toLoad.c_str(), 0);
   if (!result->file)
   {
     delete result;
@@ -184,7 +184,7 @@ void* Init(const char* strFile, unsigned int filecache, int* channels,
   }
   result->callbacks = GetCallbacks(strFile);
 
-  if (!ov_open_callbacks(result->file, &result->vorbisfile,
+  if (ov_open_callbacks(result->file, &result->vorbisfile,
                          NULL, 0, result->callbacks) != 0)
   {
     delete result;
