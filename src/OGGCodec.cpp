@@ -322,8 +322,8 @@ int TrackCount(const char* strFile)
   }
   ctx->callbacks = GetCallbacks(strFile);
 
-  if (!ov_open_callbacks(ctx->file, &ctx->vorbisfile,
-                         NULL, 0, ctx->callbacks) != 0)
+  if (ov_open_callbacks(ctx->file, &ctx->vorbisfile,
+                        NULL, 0, ctx->callbacks) != 0)
   {
     delete ctx;
     return 1;
