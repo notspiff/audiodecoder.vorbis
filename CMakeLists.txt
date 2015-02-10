@@ -21,3 +21,5 @@ set(DEPLIBS ${OGG_LIBRARIES}
             ${VORBIS_LIBRARIES})
 
 build_addon(audiodecoder.vorbis VORBIS DEPLIBS)
+
+include(CPack)
