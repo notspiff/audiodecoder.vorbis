@@ -237,7 +237,7 @@ void* Init(const char* strFile, unsigned int filecache, int* channels,
 
   if (*samplerate == 0 || *channels == 0 || *bitspersample == 0 || *totaltime == 0)
   {
-    XBMC->Log(ADDON::LOG_ERROR, "OGGCodec: Can't get stream info, SampleRate=%i, Channels=%i, BitsPerSample=%i, TotalTime=%"PRIu64"", *samplerate, *channels, *bitspersample, *totaltime);
+    XBMC->Log(ADDON::LOG_ERROR, "OGGCodec: Can't get stream info, SampleRate=%i, Channels=%i, BitsPerSample=%i, TotalTime=%" PRIu64, *samplerate, *channels, *bitspersample, *totaltime);
     delete result;
     return NULL;
   }
