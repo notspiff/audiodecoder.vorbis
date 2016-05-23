@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="audiodecoder.vorbis"
-  version="1.0.0"
+  version="1.1.0"
   name="Vorbis Audio Decoder"
   provider-name="spiff">
   <requires>
@@ -13,10 +13,10 @@
     extension=".ogg|.oggstream|.oga"
     mimetype="application/ogg|audio/ogg"
     tracks="true"
-    library_linux="audiodecoder.vorbis.so"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Vorbis Audio Decoder</summary>
     <description lang="en">Vorbis Audio Decoder</description>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>
